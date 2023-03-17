@@ -1,0 +1,75 @@
+{
+  "seller": [
+    {
+      "name": "Amit Kumar",
+      "email": "amit@gmail.com",
+      "password": "amit",
+      "id": 1
+    },
+    {
+      "name": "Amit Kumar",
+      "email": "ak4440411@gmail.com",
+      "password": "hjka;ld",
+      "id": 2
+    },
+    {
+      "name": "Amit Kumar",
+      "email": "test@gmail.com",
+      "password": "test",
+      "id": 3
+    },
+    {
+      "name": "Amit Kumar",
+      "email": "test@gmail.com",
+      "password": "testin",
+      "id": 4
+    }
+  ],
+
+  "categories": 
+    [
+      {
+          "id": 1,
+          "name": "Clothes",
+          "image": "https://api.lorem.space/image/fashion?w=640&h=480&r=2811",
+          "creationAt": "2023-03-10T05:31:32.000Z",
+          "updatedAt": "2023-03-10T05:31:32.000Z"
+      },
+      {
+          "id": 2,
+          "name": "Electronics",
+          "image": "https://api.lorem.space/image/watch?w=640&h=480&r=6558",
+          "creationAt": "2023-03-10T05:31:32.000Z",
+          "updatedAt": "2023-03-10T05:31:32.000Z"
+      },
+      {
+          "id": 3,
+          "name": "Furniture",
+          "image": "https://api.lorem.space/image/furniture?w=640&h=480&r=84",
+          "creationAt": "2023-03-10T05:31:32.000Z",
+          "updatedAt": "2023-03-10T05:31:32.000Z"
+      },
+      {
+          "id": 4,
+          "name": "Shoes",
+          "image": "https://api.lorem.space/image/shoes?w=640&h=480&r=2390",
+          "creationAt": "2023-03-10T05:31:32.000Z",
+          "updatedAt": "2023-03-10T05:31:32.000Z"
+      },
+      {
+          "id": 5,
+          "name": "Others",
+          "image": "https://api.lorem.space/image?w=640&h=480&r=8741",
+          "creationAt": "2023-03-10T05:31:32.000Z",
+          "updatedAt": "2023-03-10T05:31:32.000Z"
+      },
+      {
+          "id": 12,
+          "name": "Dragon ball tenkaichi 3",
+          "image": "https://static.wikia.nocookie.net/dragonball/images/6/68/Dragon_Ball_Z_Budokai_Tenkaichi_3.jpg/revision/latest?cb=20120826171212&path-prefix=es",
+          "creationAt": "2023-03-10T16:02:18.000Z",
+          "updatedAt": "2023-03-10T16:05:37.000Z"
+      }
+    
+  ]
+}

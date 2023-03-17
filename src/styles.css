@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+    --white : #fff;
+    --black : #000;
+    --primary : rgb(255 153 0);
+    --primary-light : rgba(255, 153, 0, 0.9);
+    --background : #232F3E;
+}
+
+/* color classes */
+
+.primary-text{
+    color : var(--primary);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+input.form-control:focus{
+    box-shadow: none;
+    outline: none;
+}
+.btn:focus, .btn:focus-visible, .btn-outline-success:focus-visible{
+    box-shadow: none;
+    outline: none;
+}
+.btn-success{
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color : var(--white) !important;
+}
+.btn-success:active{
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color : var(--white) !important;
+    box-shadow: none !important;
+    outline: none;
+}
+.btn-success:hover{
+    background-color: var(--primary-light) !important;
+    border-color: var(--primary-light) !important;
+}

@@ -1,0 +1,31 @@
+.navbar-nav{
+    font-weight: 500;
+}
+.nav_search{
+    width: 57%;
+}
+.nav_search input{
+    border-right: none;
+    border-radius: 6px 0px 0px 6px;
+}
+.nav_search button{
+    border-left: none;
+    border-radius: 0px 6px 6px 0px;
+}
+.nav_menu_list{
+    width: 40%;
+}
+.navbar-nav .nav-item .nav-link{
+    color: var(--white);
+}
+.navbar-nav .nav-item .nav-link:hover{
+    color: var(--primary);
+}
+.navbar-nav .nav-item .nav-link:active, .navbar-nav .nav-item .nav-link.active{
+    color: var(--primary) !important;
+}
+
+.main_menu_wrapper{
+    background-color: var(--background);
+    padding: 0px 1rem;
+}

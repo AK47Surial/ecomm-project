@@ -1,0 +1,37 @@
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+            <h2 class="primary-text">Seller Registration</h2>
+            <form #sellerRegistration="ngForm" (ngSubmit)="createRegistration(sellerRegistration.value)">
+                <div class="form-group mb-3">
+                  <label for="exampleInputName" class="mb-2">Name</label>
+                  <input type="text" class="form-control" name="name" ngModel placeholder="Full Name">
+                </div>
+                <div class="form-group mb-3">
+                  <label for="exampleInputEmail1" class="mb-2">Email address</label>
+                  <input type="email" class="form-control" name="email" ngModel placeholder="Email Address">
+                </div>
+                <div class="form-group mb-4">
+                  <label for="exampleInputPassword1" class="mb-2">Password</label>
+                  <input type="password" class="form-control" name="password" ngModel placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Submit</button>
+            </form>
+
+            <!-- Modal -->
+            <div *ngIf="responseObj.status" class="result_model" id="exampleModalCenter" tabindex="1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-content align-items-center">
+                    <div class="modal-body">
+                        <div>
+                            <img src="../../assets/images/favicon.png" alt="" width="50px">
+                        </div>
+                        <div>
+                            <h4>{{responseObj.message}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

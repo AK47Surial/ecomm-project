@@ -1,0 +1,18 @@
+.footer{
+    background-color: var(--background);
+}
+.footer h5{
+    color: var(--white);
+}
+.footer .footer-menu{
+    list-style-type: none;
+    padding-left: 0;
+}
+.footer .footer-menu a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+}
+.footer .footer-menu a:hover{
+    text-decoration: underline;
+}
