@@ -1,0 +1,26 @@
+.home_parent_wrapper{
+    position: relative;
+}
+.home_product{
+    position: absolute;
+    bottom: 0.7rem;
+}
+.product_slider_container{
+    background-color: var(--white);
+    padding: 0.5rem 2rem;
+}
+.lbl_price{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 5px;
+}
+.lbl_price>span:first-child {
+    background-color: var(--price-bgcolor);
+    width: fit-content;
+    padding: 2px 8px;
+    margin-right: 0.7rem ;
+}
+.lbl_title{
+    font-weight: 600;
+}

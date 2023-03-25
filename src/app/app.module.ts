@@ -13,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     FontAwesomeModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SlickCarouselModule,
+    HttpClientInMemoryWebApiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
