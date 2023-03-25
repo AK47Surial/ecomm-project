@@ -17,29 +17,20 @@
         </div>
         <div class="nav_menu_list">
             <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" routerLink="/"> <fa-icon [icon]="faHome"></fa-icon> Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/seller-auth"> <fa-icon [icon]="faPerson"></fa-icon> Seller</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/login"> <fa-icon [icon]="faUserLock"></fa-icon> Login</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/cart"> <fa-icon [icon]="faCartShopping"></fa-icon> Cart(0)</a>
+                <li class="nav-item" *ngFor="let menu of headerMenuList">
+                  <a class="nav-link" [routerLink]="[menu.path]" [routerLinkActive]="'active'"> <fa-icon [icon]="menu['icon']"></fa-icon> {{menu.label}}</a>
                 </li>
               </ul>
         </div>
       </div>
     </div>
   </nav>
-<nav class="navbar-expand-lg main_menu_wrapper" *ngIf="isMenuListAvailable">
+  <nav class="navbar-expand-lg main_menu_wrapper" *ngIf="isMenuListAvailable">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- <ul class="navbar-nav mb-2 mb-lg-0" *ngFor="let item of allCategoryList; let i = index">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/"> Home</a>
+        <ul class="navbar-nav mb-2 mb-lg-0" *ngFor="let item of allCategoryList">
+          <li class="nav-item pe-3">
+            <a class="nav-link" aria-current="page" routerLink="/">{{ item.name }}</a>
           </li>
-        </ul> -->
+        </ul>
     </div>
   </nav>

@@ -1,1 +1,58 @@
-<h1>Home Page Content</h1>
+<div class="home_parent_wrapper">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="../../assets/images/slide_2.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../../assets/images/slide_3.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../../assets/images/slide_4.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../../assets/images/slide_5.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../../assets/images/slide_6.jpg" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev h-50" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next h-50" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  </div>
+
+  <!-- Electronic Deal -->
+
+  <div class="row mx-auto">
+      <div class="container-fluid home_product">
+        <div class="product_slider_container">
+          <div class="row">
+            <h4>Today’s Deals</h4>
+          </div>
+          <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" 
+              [config]="slideConfig"
+              (init)="slickInit($event)"
+              (breakpoint)="breakpoint($event)"
+              (afterChange)="afterChange($event)"
+              (beforeChange)="beforeChange($event)">            
+                <div ngxSlickItem *ngFor="let slide of slides" class="slide p-2">
+                    <img src="{{ slide.images[0] }}" alt="" width="100%">
+                    <div class="lbl_price">
+                      <span>Price - &#8377;{{ slide.price }}</span>
+                      <span class="r_text">Deal of the Day</span>
+                    </div>
+                    <div class="lbl_title">
+                      <span>{{ slide.title }}</span>
+                    </div>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+      </div>
+  </div> 
+</div>

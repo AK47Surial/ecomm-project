@@ -12,11 +12,15 @@ export class SellerService {
   postSellerRegistrationData(data:sellerData){
     return this.http.post('http://localhost:3000/seller/', data);
   }
+
   getAllCategoryList(){
-    return this.http.get('https://api.escuelajs.co/api/v1/categories');
+    // return this.http.get('https://api.escuelajs.co/api/v1/categories');
+      return this.http.get('http://localhost:3000/categories');
   }
-  // getAllCategoryList(){
-  //   return this.http.get('http://localhost:3000/categories');
-  // }
+
+  getAllProductDetails(){
+    // return this.http.get('https://api.escuelajs.co/api/v1/categories');
+      return this.http.get('http://localhost:3000/products');
+  }
 
 }

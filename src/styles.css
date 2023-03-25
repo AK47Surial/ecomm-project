@@ -6,12 +6,16 @@
     --primary : rgb(255 153 0);
     --primary-light : rgba(255, 153, 0, 0.9);
     --background : #232F3E;
+    --price-bgcolor : #CC0C39;
 }
 
 /* color classes */
 
 .primary-text{
     color : var(--primary);
+}
+.r_text{
+    color : var(--price-bgcolor);
 }
 
 body{
@@ -40,4 +44,7 @@ input.form-control:focus{
 .btn-success:hover{
     background-color: var(--primary-light) !important;
     border-color: var(--primary-light) !important;
+}
+.slick-prev:before, .slick-next:before{
+    color : var(--price-bgcolor) !important;
 }

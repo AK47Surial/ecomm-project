@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
@@ -18,30 +17,56 @@ export class HeaderComponent implements OnInit{
   faPerson = faPerson;
   faUserLock = faUserLock;
   faSearch = faSearch;
-  selectedTab: string= "";
   
-  public allCategoryList:any;
+  public allCategoryList:any = [];
   public isMenuListAvailable:boolean = false;
-
-  constructor(
-    private sellerService :  SellerService,
-    private http :  HttpClient    
-  ) {}
+  public headerMenuList:Array<any>=[
+    {
+      "id" : 1,
+      "icon" : faHome,
+      "label" : "Home",
+      "path" : '/',
+      "visible" : true,
+    },
+    {
+      "id" : 2,
+      "icon" : faPerson,
+      "label" : "Seller",
+      "path" : '/seller-auth',
+      "visible" : true,
+    },
+    {
+      "id" : 3,
+      "icon" : faUserLock,
+      "label" : "Login",
+      "path" : '/login',
+      "visible" : true,
+    },
+    {
+      "id" : 4,
+      "icon" : faCartShopping,
+      "label" : "Cart(0)",
+      "path" : '/cart',
+      "visible" : true,
+    },
+  ]
+  constructor( private sellerService :  SellerService ) {}
 
   ngOnInit(){    
-    this.allCategoryList = this.http.get('http://localhost:3000/categories').subscribe((Response: any) => {}
-    );
     this.getAllCategoryList();
+
   }
 
   getAllCategoryList(){
-    this.sellerService.getAllCategoryList().subscribe((response:any)=>{
+    this.sellerService.getAllCategoryList().subscribe((data)=>{
+      this.allCategoryList = data;
+      console.log(this.allCategoryList);
       this.isMenuListAvailable = true;
-      this.allCategoryList = response;
     })
   }
 
-  isActiceMenu(item:string){
-    this.selectedTab = item;
+  ngOnDestroy(){
+    this.headerMenuList = [];
   }
+
 }
